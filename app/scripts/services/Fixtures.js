@@ -33,6 +33,9 @@
     };
 
     Fixtures.getAlbum = function() {
+      for(var i = 0; i < albumPicasso.songs.length; i++) {
+        albumPicasso.songs[i].formatted = buzz.toTimer(albumPicasso.songs[i].duration);
+      }
       return albumPicasso;
     };
 
